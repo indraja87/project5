@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>PG</title>
+         <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    </head>
+<body>
+    <section class="navbar">
+    <nav class="navbar navbar-default navbar-fixed-top cust-nav" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand cust-logo" href="http://hostelsincity.com/"><img src="img/logo-1.png" class="logo"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+			<ul class="nav navbar-nav cust-ul">
+								<li class="mbil-app"><a href="http://hostelsincity.com/search/Hostels-in-Bengaluru-Karnataka-India#" data-toggle="modal" data-target="#myModal"><img src="img/mobile-app.png" alt="Download app">Download App</a></li>
+				<li class="mbil-app0">
+					
+					
+										 <a href="sing.html">
+						<span><img src="img/user-login.png" alt="user"></span> Login/Signup
+					  
+						</a>					  
+					  					  					
+				</li>
+			</ul> 
+        </div>
+        </div>
+        </nav>
+    </section>
+    <!--navbar end-->
+    <section class="banner">
+    <div class="banner-img">
+        
+        <div class="container-fluid">
+					<div class="row">
+					<div class="col-sm-1 col-md-1"></div>
+						<div class="col-sm-6 col-md-7">
+							<div class="sarch-finger">
+								
+                                <div class="input-group">
+                                    
+                 
+                 <input class="btn btn-lg" name="email" id="search" type="email" placeholder="Search With Finger Not By Foot" required="">
+                                    <img src="img/search.png" class="search-img">
+              </div>
+							</div>
+						</div>
+							<div class="col-sm-5 col-md-4 no-pading frm-styles">
+								<div class="frm-styles0">
+									<div class="col-sm-10 col-md-10">
+									
+									<h3>Search For <span>Hostel &amp; PG</span></h3>
+									<img src="img/line.png" class="img-responsive">
+									<form class="form-horizontal cust-frm" method="POST" name="searchform" id="searchform" enctype="multipart/form-data">
+										<div class="form-group">
+											<div class="col-sm-12">
+												<div class="ui-widget">
+												  <input id="searchlocation" name="searchlocation" class="form-control fcolr-1" placeholder="Where would you like to stay" style="color: #1a1e62;" autocomplete="off">
+												</div>
+												<span id="searcherror"></span>
+												<input type="hidden" name="latitude" id="latitude">
+												<input type="hidden" name="longitude" id="longitude">
+												<input type="hidden" name="usersearchlocation" id="usersearchlocation">
+												<input type="hidden" name="cityname" id="cityname">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-12">
+												<div class="selectParentmat">
+													<select class="form-control" name="optionsRadios2" id="optionsRadios2" autofocus="on">
+													  <option value="0">Select Hostels Type</option>
+													  	<option value="MQ==,Mens Hostels">Men's Hostels</option>
+														<option value="Mg==,Womens Hostels">Women's Hostels</option>
+														<option value="Mw==,Mens PG">Men's PG</option>
+														<option value="NA==,Womens PG">Women's PG</option>
+														</select>
+												</div>
+											<span id="radioerror"></span>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<div class="col-sm-12">
+												<div class="selectParentmat">
+													<select class="form-control" name="budget" id="budget" autofocus="on">
+													  <option value="0">Select Your Budget</option>
+													  	<option value="NA==,4000-5000">4000-5000</option>
+														 <option value="NQ==,5000-6000">5000-6000</option>
+												         <option value="Ng==,6000-7000">6000-7000</option>
+								                         <option value="Nw==,7000-8000">7000-8000</option>
+												         <option value="OA==,8000-9000">8000-9000</option>
+												         <option value="OQ==,10000-11000">10000-11000</option>
+														<option value="MTA=,11000-12000">11000-12000</option>
+														<option value="MTE=,12000-13000">12000-13000</option>
+														<option value="MTI=,13000-14000">13000-14000</option>
+																										</select>
+												</div>
+												<span id="budgeterror"></span>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-12">
+											<div class="selectParentmat">
+												<select class="form-control" name="foodtype" id="foodtype" autofocus="on">
+												  <option value="0">--Choose Food Type---</option>
+												  <option value="MQ==,North-Indian">North-Indian</option>
+													 <option value="Mg==,South-Indian">South-Indian</option>
+													<option value="Mw==,Both">Both</option>
+													</select>
+											</div>
+											<span id="foodtypeerror"></span>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-12 text-center">
+												<input type="submit" name="homesearch" id="homesearch" value="Search &nbsp;" class="btn btn-danger" style="background-color:#1a1e62;  border-color: #1a1e62;">
+										</div>
+										</div>
+									</form>
+							</div>
+							<div class="col-sm-2 col-md-2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+        </div>
+    </section>
+    <section class="paddingall">
+        <div class="membership">
+          <center>  <img class="mem-img" src="img/images.jpg"></center>
+<h1 class="ani">
+
+  <a href="" class="typewrite" data-period="2000" data-type='[ "The way which helps you access all the facilities we got" ]'>
+    <span class="wrap"></span>
+  </a>
+</h1>
+            
+            </div>
+        </section>
+    <section class="member-text">
+        <div class="container-fluid mem">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 month">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="box">
+	<i class="fa fa-quote-left fa2" aria-hidden="true"></i>
+	<div class="text">
+		<i class="fa fa-quote-right fa1" aria-hidden="true"></i>			
+		<div>
+			<h2>1 Month</h2>
+			<p>We provide you membership cards, 
+			these cards help you access all facilities. As an extra we A to Z services. help you stay out of station branches 10 times</p>
+		</div>
+
+	</div>
+</div>
+                    
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 month">
+                    <div class="box">
+	<i class="fa fa-quote-left fa2" aria-hidden="true"></i>
+	<div class="text">
+		<i class="fa fa-quote-right fa1" aria-hidden="true"></i>			
+		<div>
+			<h2>3 Month</h2>
+			<p>We provide you membership cards, 
+			these cards help you access all facilities. As an extra we A to Z services. help you stay out of station branches 10 times</p>
+		</div>
+
+	</div>
+</div>
+                    
+                   
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 month">
+                    
+
+<div class="box">
+	<i class="fa fa-quote-left fa2" aria-hidden="true"></i>
+	<div class="text">
+		<i class="fa fa-quote-right fa1" aria-hidden="true"></i>			
+		<div>
+			<h2>6 Months</h2>
+			<p>We provide you membership cards, 
+			these cards help you access all facilities. As an extra we A to Z services. help you stay out of station branches 10 times</p>
+		</div>
+
+	</div>
+</div>
+                    
+                </div>
+            
+            </div>
+            </div>
+            
+    </section>
+     <section class="sharing">
+        <div class="container">
+	<div class="row">
+		<h2>Our</h2>
+        <p>Image caption with a text previewed in the bottom</p>
+        <p>Width size doesn´t matter</p>
+	</div>
+    <div class="row">
+    	<div class="col-lg-4">
+    				<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+						<p style="text-align:center; margin-top:20px;">
+							<img src="img/single1.jpg" class="img-responsive" alt="">
+						</p>
+						<div class="caption">
+							<div class="blur"></div>
+							<div class="caption-text">
+								<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+								
+<p ><span>Paying Guest &amp; Service Rooms</span> All the Room’s at Metro City Hostel are designed keeping into mind the requirements of working professionals. </p>
+
+<ul class="list-unstyled">
+<li> LED Television</li>
+<li>Hi-Speed Wi-Fi</li>
+<li> Laundry</li>
+</ul>
+
+
+<ul class="list-unstyled">
+<li> Car Parking</li>
+<li> Hot Water</li>
+<li> Air Condition</li>
+</ul>
+
+
+							</div>
+						</div>
+					</div>
+				
+	    </div>
+        <div class="col-lg-4">
+        			<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+						<p style="text-align:center; margin-top:20px;">
+							<img src="img/service2.jpg" class="img-responsive" alt="">
+						</p>
+						<div class="caption">
+							<div class="blur"></div>
+							<div class="caption-text">
+								<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+								<p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+								<a class=" btn btn-default" href="http://mispicaderos.com"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+							</div>
+						</div>
+					</div>
+				
+	    </div>
+        <div class="col-lg-4">
+        			<div class="cuadro_intro_hover " style="background-color:#cccccc;">
+						<p style="text-align:center; margin-top:20px;">
+							<img src="img/sharing3.jpg" class="img-responsive" alt="">
+						</p>
+						<div class="caption">
+							<div class="blur"></div>
+							<div class="caption-text">
+								<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+								<p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+								<a class=" btn btn-default" href="http://mispicaderos.com"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+							</div>
+						</div>
+					</div>
+				
+	    </div>
+        
+    </div>
+</div>
+        
+
+
+    
+    </section>
+    <section class="we">
+    <div class="provi">
+        <h1 class="providing">We Providing</h1>
+        <center><img src="img/experticity_bolts.png" class="pro-img"></center>
+    </div>
+    
+    
+    </section>
+    
+    
+    <section class="paddding">
+        <div class="container pro">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <img src="img/cooking.jpg" class="cook">
+                <p></p>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 text">
+                <h2 class="catering">Catering Services</h2>
+                <p class="para-ser">We provide the excellent catering services so that not only our hostlers out siders can order the food.</p>
+                <p class="para-ser">Take away is also provided</p>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <img class="dho-img" src="img/dhobi.jpg">
+                
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+               <h2 class="lanundry">laundry service</h2>
+                <p class="para-dho">We provide all type of laundary cleanings ironing,dry cleaning normol washing etc.</p>
+                <p class="para-dho">Customer satisfaction is our happyness.</p>
+                <p></p>
+            </div>
+            </div>
+        
+        
+        
+        
+        </div>
+    
+    </section>
+   
+    
+    
+    
+    
+     <section class="paddding1">
+        <div class="container pro">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                 <h2 class="hel-h1">Health Services</h2>
+                <p class="para-hel">We provide 24/7 doctor facilities.</p>
+                <p class="para-hel">Customer satisfaction is our happyness.</p>
+                
+                <p></p>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 text">
+               <img src="img/doctor.jpg" class="doc">
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <h2 class="lanundry">Cleaning service</h2>
+                <p class="para-dho">We provide any time clean you are room.</p>
+                <p class="para-dho">Customer satisfaction is our happyness.</p>
+               
+                
+                
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+               <img class="dho-img" src="img/cleaning.jpg">
+            </div>
+            </div>
+        
+        
+        
+        
+        </div>
+    
+    </section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+
+
+<!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/visa.png" width="133" height="100"></div>
+      <div class="swiper-slide"><img src="img/paypal.png" width="133"  height="100"></div>
+      <div class="swiper-slide"><img src="img/paytm.png" width="133" height="100"></div>
+      <div class="swiper-slide"><img src="img/master.png" width="133" height="100"></div>
+      <div class="swiper-slide"><img src="img/tez.png" width="133" height="100"></div>
+      <div class="swiper-slide"><img src="img/visa.png" width="133" height="100"></div>
+      <div class="swiper-slide"><img src="img/paypal.png" width="133" height="100"></div>
+     
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+    
+   <footer>
+			<section class="footSectn1">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="hostlFrmn">
+								<h5>Hostel For Men &amp; Women</h5>
+								<div class="arrow-upstyle">
+									<div class="arrow-down"></div>
+								</div>
+
+								<ul class="pghstlMn speclsCLS">
+									<li><a href="#">> Hostels in Hyderabad</a></li>
+									<li><a href="#">> PG Hostels for Women's</a></li>
+									<li><a href="#">> PG Hostels for Men's</a></li>
+									
+									<li><a href="#">> Best PG Accommodations</a></li>
+									<li><a href="#">> PG Accommodations</a></li>
+								
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="hostlFrmn">
+								<div class="speclsCLS0">
+									<h5>Quick Links</h5>
+									<div class="arrow-upstyle1">
+										<div class="arrow-down"></div>
+									</div>
+								</div>
+								<ul class="pghstlMn">
+									<li><a href="index.html"> > Home </a></li>
+									<li><a href="#">> About Us</a></li>
+									<li><a href="#">> Benefit For Hostel Owners</a></li>
+									<li><a href="#">> Privacy Policy</a></li>
+									<li><a href="#">> Terms and Conditions</a></li>
+									<li><a href="#">> Cancellation Payment Policy</a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="hostlFrmn">
+								<h5>Contact info</h5>
+								<div class="arrow-upstyle1">
+									<div class="arrow-down"></div>
+								</div>
+								<div class="col-sm-12 col-xs-12 toTouchhsl no-pand7">
+									<div class="col-sm-2 col-xs-1 ftrAdrs-N"></div>
+									<div class="col-sm-10 col-xs-12 ftrAdrs-N"><h6>To touch with A to Z contact us</h6></div>
+								</div>
+								<div class="col-sm-12 col-xs-12 no-pand7">
+									<div class="col-sm-2 col-xs-1 ftrAdrs-N"><img src="./Signup_Login_files/addresss.png"></div>
+									<div class="col-sm-10 col-xs-11 ftrAdrs-N"><h6>**********************************</h6></div>
+								</div>
+								<div class="col-sm-12 col-xs-12 no-pand7">
+									<div class="col-sm-2 col-xs-1 ftrAdrs-N"><img src="./Signup_Login_files/phone.png"></div>
+									<div class="col-sm-10 col-xs-11 ftrAdrs-N">
+										<h6>+** ***********</h6>
+									</div>
+								</div>
+								<div class="col-sm-12 col-xs-12 no-pand7">
+									<div class="col-sm-2 col-xs-1 ftrAdrs-N"><img src="./Signup_Login_files/maiil.png"></div>
+									<div class="col-sm-10 col-xs-11 ftrAdrs-N">
+										<h6>****@*********.com</h6>
+									</div>
+								</div>
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="hostlFrmn">
+								<h5>Quick Contact</h5>
+								<div class="arrow-upstyle1">
+									<div class="arrow-down"></div>
+								</div>								
+								<form action="http://hostelsincity.com/sendmail" class="form-horizontal foot-frmstl" name="contact_us" id="contact_us" method="post" accept-charset="utf-8">
+								  <div class="form-group">
+									<div class="col-sm-12">
+										<span id="span_contact_name" style="color: white"></span>
+									  	<input type="text" name="contact_name" value="" class="form-control fcolr-1" id="contact_name" placeholder="Name" maxlength="10">
+									</div>
+								  </div>
+								  <div class="form-group">
+									<div class="col-sm-12">
+									<span id="span_contact_email" style="color: white"></span>
+									  <input type="text" name="contact_email" value="" class="form-control fcolr-1" id="contact_email" placeholder="Email">
+									</div>
+								  </div>
+								  <div class="form-group">
+									<div class="col-sm-12">
+									<span id="span_contact_mobile" style="color: white"></span>
+									  <input type="text" name="contact_mobile" value="" class="form-control fcolr-1" id="contact_mobile" placeholder="Mobile">
+									</div>
+								  </div>
+								  <div class="form-group">
+									<div class="col-sm-12">
+									<span id="span_contact_desc" style="color: white"></span>
+									  <textarea name="contact_desc" cols="40" rows="3" class="form-control fcolr-1" id="contact_desc" placeholder="Description"></textarea>
+									</div>
+								  </div>
+								  <div class="form-group">
+									<div class="col-sm-12">
+									  <button type="submit" class="btn btn-default" name="btn_contact" id="btn_contact">SUBMIT</button>
+									</div>
+								  </div>
+								  </form>							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="secndFTR">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 col-xs-12">
+							<div class="cpyrts0">
+								<p style="color:#fff;">© 2018 All Rights Reserved   AtoZ.com.</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+		</footer> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>//made by vipul mirajkar thevipulm.appspot.com
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };</script>
+    <script> var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 5,
+      spaceBetween: 50,
+      // init: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        }
+      }
+    });</script>
+    </body>
+
+
+</html>
